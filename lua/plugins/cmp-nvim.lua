@@ -58,6 +58,12 @@ return {
         }
       })
 
+      cmp.setup.filetype({ "sql" }, {
+        sources = {
+          { name = "vim-dadbod-completion" },
+          { name = "buffer" },
+        }
+      })
       -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
       -- -- ME: Comment command line autocomplete
       -- cmp.setup.cmdline(':', {
