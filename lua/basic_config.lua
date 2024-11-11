@@ -1,0 +1,6 @@
+vim.cmd("colorscheme nightfox")
+vim.cmd("set number")
+vim.cmd("set expandtab")
+vim.cmd("set smarttab")
+vim.cmd("set tabstop=2") 
+vim.cmd("set shiftwidth=2")
