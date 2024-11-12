@@ -10,7 +10,7 @@ return {
     tree.setup({
       filters = {
         dotfiles = false,
-        gitignore = false,
+        git_ignored = false,
       }
     })
     vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFindFile<CR>")
