@@ -4,6 +4,9 @@
 
 ## Keymaps
 WIP
+
+- TODO
+    - buffer close <C-bd> (buffer delete)
 - `<leader>`
     - `f` - find
         - `f` - file

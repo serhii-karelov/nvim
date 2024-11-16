@@ -1,3 +1,6 @@
+-- TODO:
+--
+--
 require("config.lazy")
 require("remap")
 require("basic_config")
