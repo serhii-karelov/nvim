@@ -17,10 +17,13 @@ return {
   config = function() 
     vim.opt.conceallevel = 1
     require("obsidian").setup({
+      ui = {
+        enable = true,
+      },
       workspaces = {
         {
-          name = "my_path",
-          path = "~/my_path",
+          name = "my_path_2.0",
+          path = "/home/serhii/Documents/vaults/my_path_2.0", 
         },
         {
           name = "eska-workspace",
