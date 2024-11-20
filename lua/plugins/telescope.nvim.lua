@@ -3,18 +3,25 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' },
 
   config = function()
+    local actions = require("telescope.actions")
     require("telescope").setup({
       pickers = {
         buffers = {
           initial_mode = "normal",
+          mappings = {
+            n = {
+              ["dd"] = actions.delete_buffer,
+            },
+          },
         },
         lsp_document_symbols = {
           initial_mode = "normal",
         },
       }
     })
+
     local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<leader><space>", builtin.find_files)  -- find all files
+    vim.keymap.set("n", "<leader><leader>", builtin.lsp_references)  -- show all references
     vim.keymap.set("n", "<leader>ff", builtin.find_files)  -- [f]ind all files
     vim.keymap.set("n", "<leader>fg", builtin.git_files)   -- [f]ind only files tracked by git 
 
@@ -24,7 +31,7 @@ return {
 
     vim.keymap.set("n", "<leader>bb", builtin.buffers)     -- [b]uiltin open buffers
     vim.keymap.set("n", "<leader>b/", builtin.search_history)
-    vim.keymap.set("n", "<leader>:", builtin.command_history)
+    vim.keymap.set("n", "<leader>b:", builtin.command_history)
 
     vim.keymap.set("n", "<leader>ss", builtin.lsp_references)
     vim.keymap.set("n", "<leader>si", builtin.lsp_incoming_calls)

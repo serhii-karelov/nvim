@@ -18,7 +18,12 @@ return {
     vim.opt.conceallevel = 1
     require("obsidian").setup({
       ui = {
-        enable = true,
+        enable = false,
+        checkboxes = {
+          -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
+          [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+          ["x"] = { char = "", hl_group = "ObsidianDone" },
+        },
       },
       workspaces = {
         {
@@ -30,6 +35,7 @@ return {
           path = "~/projects/eska/eska-workspace",
         },
       },
+      notes_subdir = "daily_notes",
     })
   end,
 }
