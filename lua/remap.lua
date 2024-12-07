@@ -6,15 +6,19 @@ function nnoremap(from, to)
   vim.keymap.set("n", from, to)
 end
 
+function inoremap(from, to)
+  vim.keymap.set("i", from, to)
+end
+
 function vn_noremap(from, to)
   vnoremap(from, to)
   nnoremap(from, to)
 end
 
-vim.cmd("inoremap <C-A> <Home>")
-vim.cmd("inoremap <C-E> <End>")
-vim.cmd("inoremap <C-F> <Right>")
-vim.cmd("inoremap <C-B> <Left>")
+inoremap("<C-A>", "<Home>")
+inoremap("<C-E>", "<End>")
+inoremap("<C-F>", "<Right>")
+inoremap("<C-B>", "<Left>")
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "Q", "gq")

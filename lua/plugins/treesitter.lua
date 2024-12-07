@@ -7,9 +7,11 @@ return {
       auto_install = true,
       highlight = {
         enable = true,
+        disable = { "csv" }
       },
       indent = {
         enable = true,
+        disable = { "csv" }
       }
     })
   end,

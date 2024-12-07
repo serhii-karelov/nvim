@@ -14,9 +14,13 @@ return {
     },
   },
   config = function()
+    local navic = require("nvim-navic")
 
     require("lspconfig").pyright.setup({
       filetypes = {"python"},
+      on_attach = function(client, bufnr)
+        navic.attach(client, bufnr)
+      end,
     })
   end,
 }
