@@ -6,7 +6,6 @@ vim.cmd("set tabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set ignorecase")
 vim.cmd("set smartcase")
-
 -- TODO
 -- Switch tabs with <leader>+1, <leader>+2, ...
 -- Create new tab?

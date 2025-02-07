@@ -32,6 +32,9 @@ return {
         },
       },
       pickers = {
+        find_files = {
+          hidden = true,
+        },
         buffers = {
           initial_mode = "normal",
           mappings = {

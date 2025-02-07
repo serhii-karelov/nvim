@@ -27,3 +27,6 @@ vn_noremap("<leader>y", "\"+y")
 vn_noremap("<leader>p", "\"+p")
 vn_noremap("<leader>P", "\"+P")
 
+-- lsp
+nnoremap("<leader>r", vim.lsp.buf.rename)
+

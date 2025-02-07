@@ -7,6 +7,7 @@ return {
         'lsp',
         -- 'regex',
     },
+    large_file_cutoff = 800,
   },
   config = function(_, opts)
     require("illuminate").configure(opts)
