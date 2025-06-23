@@ -1,26 +1,54 @@
 return {
   "neovim/nvim-lspconfig",
-  dependencies = {
-    { "williamboman/mason.nvim", opts = {}},
-    {
-      "williamboman/mason-lspconfig.nvim",
-      opts = {
-        ensure_installed = {
-          "pyright",
-          "ruff",
-          "marksman",
-        }
-      }
-    },
-  },
-  config = function()
-    local navic = require("nvim-navic")
-
-    require("lspconfig").pyright.setup({
-      filetypes = {"python"},
-      on_attach = function(client, bufnr)
-        navic.attach(client, bufnr)
-      end,
-    })
-  end,
+--   dependencies = {
+--     { "williamboman/mason.nvim", opts = {}},
+--     {
+--       "williamboman/mason-lspconfig.nvim",
+--       opts = {
+--         ensure_installed = {
+--           "pyright",
+--           "ruff",
+--           "marksman",
+--         }
+--       }
+--     },
+--   },
+--   config = function()
+--     local navic = require("nvim-navic")
+--     local lspconfig = require("lspconfig")
+--
+--     lspconfig.pyright.setup({
+--       filetypes = {"python"},
+--       on_attach = navic.attach,
+--     })
+--
+--     lspconfig.rust_analyzer.setup({
+--       filetypes = {"rust"},
+--       settings = {
+--         ['rust-analyzer'] = {
+--           check = {
+--             command = "clippy";
+--           },
+--           diagnostics = {
+--             enable = true;
+--           }
+--         }
+--       },
+--       on_attach = navic.attach,
+--     })
+--   end,
 }
+--
+-- -- require'cmp'.setup({
+-- --   snippet = {
+-- --     expand = function(args)
+-- --          vim.fn["vsnip#anonymous"](args.body)
+-- --     end,
+-- --   },
+-- --   sources =  {
+-- --     { name = 'nvim_lsp' },
+-- --     { name = 'vsnip' },
+-- --     { name = 'path' },
+-- --     { name = 'buffer' },
+-- --   },
+-- -- })

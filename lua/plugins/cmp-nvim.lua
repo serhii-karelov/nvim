@@ -78,9 +78,9 @@ return {
 
       -- Set up lspconfig.
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      require('lspconfig')['pyright'].setup {
+      vim.lsp.config('*', {
         capabilities = capabilities
-      }
+      })
     end,
   },
 

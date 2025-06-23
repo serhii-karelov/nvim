@@ -6,6 +6,11 @@ require("remap")
 require("basic_config")
 require("config.ruff")
 
+
+-- vim.lsp.enable({"pyrefly"})
+vim.lsp.enable("pyright")
+
+
 ---------------------------------
 --      netrw start              
 ---------------------------------
